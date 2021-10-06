@@ -2,7 +2,23 @@ import React from "react";
 
 const App: React.FC = () => {
   return (
-    <h1>Init</h1>
+    <div className="App">
+      <div className="container">
+        <div className="reservation-container">
+          <div>
+            <h5 className="reservation-header">Reservations</h5>
+            <div className="reservation-cards-container">
+            </div>
+          </div>
+          <div className="reservation-input-container">
+            <input/>
+            <button>Add</button>
+          </div>
+        </div>
+        <div className="customer-food-container">
+        </div>
+      </div>
+    </div>
   );
 };
 
