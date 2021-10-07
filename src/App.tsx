@@ -4,6 +4,8 @@ import { RootState } from "./app/store";
 import ReservationCard from "./components/ReservationCard";
 
 const App: React.FC = () => {
+
+  const [reservationNameInput, setReservationNameInput] = React.useState("")
   const reservations = useSelector((state: RootState) => state.reservations.value)
   return (
     <div className="App">
@@ -16,7 +18,10 @@ const App: React.FC = () => {
             </div>
           </div>
           <div className="reservation-input-container">
-            <input/>
+            <input
+              value={reservationNameInput}
+              onChange={(e) => setReservationNameInput(e.target.value)}
+            />
             <button>Add</button>
           </div>
         </div>
