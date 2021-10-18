@@ -1,10 +1,10 @@
 import React from 'react'
 
-interface ReservationCardTypes {
+interface BoxInfoCardTypes {
     name: string;
 }
 
-export default function ReservationCard({ name }: ReservationCardTypes) {
+export default function BoxInfoCard({ name }: BoxInfoCardTypes) {
     return (
         <div className="reservation-card-container">
             {name}

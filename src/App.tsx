@@ -1,34 +1,34 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "./app/store";
-import ReservationCard from "./components/ReservationCard";
-import { addReservation } from "./features/reservationSlice";
+import BoxInfoCard from "./components/BoxInfoCard";
+import { addBoxInfo } from "./features/boxInfoSlice";
 
 const App: React.FC = () => {
 
-  const [reservationNameInput, setReservationNameInput] = React.useState("")
-  const reservations = useSelector((state: RootState) => state.reservations.value)
+  const [boxInfoNameInput, setboxInfoNameInput] = React.useState("")
+  const boxInfo = useSelector((state: RootState) => state.boxInfo.value)
 
   const dispatch = useDispatch();
   const handleAddReservations = () => {
-    if(!reservationNameInput) return;
-    dispatch(addReservation(reservationNameInput))
-    setReservationNameInput("")
+    if(!boxInfoNameInput) return;
+    dispatch(addBoxInfo(boxInfoNameInput))
+    setboxInfoNameInput("")
   }
   return (
     <div className="App">
       <div className="container">
         <div className="reservation-container">
           <div>
-            <h5 className="reservation-header">Reservations</h5>
+            <h5 className="reservation-header">Info:</h5>
             <div className="reservation-cards-container">
-              {reservations.map((name) => <ReservationCard name={name}/>)}
+              {boxInfo.map((boxTitle) => <BoxInfoCard name={boxTitle}/>)}
             </div>
           </div>
           <div className="reservation-input-container">
             <input
-              value={reservationNameInput}
-              onChange={(e) => setReservationNameInput(e.target.value)}
+              value={boxInfoNameInput}
+              onChange={(e) => setboxInfoNameInput(e.target.value)}
             />
             <button onClick={handleAddReservations}>Add</button>
           </div>
