@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import boxInfoReducer from "../features/boxInfoSlice";
+import editorReducer from "../features/editorSlice";
 
 
 export const store = configureStore({
     reducer: {
-        boxInfo: boxInfoReducer
+        boxInfo: boxInfoReducer,
+        editor: editorReducer,
     }
 });
 
