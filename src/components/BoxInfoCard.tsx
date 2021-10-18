@@ -10,7 +10,7 @@ export default function BoxInfoCard({ name, idx }: BoxInfoCardTypes) {
     const dispatch = useDispatch()
     return (
         <div
-        className="reservation-card-container"
+        className="boxinfo-card-container"
         onClick={() => dispatch(removeBoxInfo(idx))}
         >
             {name}
