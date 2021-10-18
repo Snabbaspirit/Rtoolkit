@@ -22,7 +22,7 @@ const App: React.FC = () => {
           <div>
             <h5 className="reservation-header">Info:</h5>
             <div className="reservation-cards-container">
-              {boxInfo.map((boxTitle) => <BoxInfoCard name={boxTitle}/>)}
+              {boxInfo.map((boxTitle, id) => <BoxInfoCard name={boxTitle} idx={id}/>)}
             </div>
           </div>
           <div className="reservation-input-container">

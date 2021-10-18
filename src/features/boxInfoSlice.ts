@@ -22,6 +22,6 @@ export const boxInfoSlice = createSlice({
     }
 });
 
-export const { addBoxInfo } = boxInfoSlice.actions
+export const { addBoxInfo, removeBoxInfo } = boxInfoSlice.actions
 
 export default boxInfoSlice.reducer;
